@@ -16,16 +16,16 @@ caches, and payment providers. Implement the small async protocols in
 ## Install
 
 ```bash
-pip install flexibilling
+uv add flexibilling
 ```
 
 Optional integrations:
 
 ```bash
-pip install "flexibilling[redis]"
-pip install "flexibilling[sqlalchemy]"
-pip install "flexibilling[fastapi]"
-pip install "flexibilling[all]"
+uv add "flexibilling[redis]"
+uv add "flexibilling[sqlalchemy]"
+uv add "flexibilling[fastapi]"
+uv add "flexibilling[all]"
 ```
 
 The complete guide is available at the

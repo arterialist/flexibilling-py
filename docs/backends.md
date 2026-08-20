@@ -65,7 +65,7 @@ They are not durable and do not provide cross-process locking.
 Install the optional dependency:
 
 ```bash
-pip install "flexibilling[redis]"
+uv add "flexibilling[redis]"
 ```
 
 ```python
@@ -87,9 +87,9 @@ configured prefix. Custom period counters are encoded as
 Install the optional dependency:
 
 ```bash
-pip install "flexibilling[sqlalchemy]"
+uv add "flexibilling[sqlalchemy]"
 # Add the async driver for your database, for example:
-pip install aiosqlite
+uv add aiosqlite
 ```
 
 Create an async session factory and use the reference repository:

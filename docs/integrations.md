@@ -5,7 +5,7 @@
 Install the optional extra:
 
 ```bash
-pip install "flexibilling[fastapi]"
+uv add "flexibilling[fastapi]"
 ```
 
 The middleware reads `request.state.customer_id` and creates a request-scoped
@@ -84,7 +84,7 @@ graceful shutdown.
 Install the optional extra:
 
 ```bash
-pip install "flexibilling[metrics]"
+uv add "flexibilling[metrics]"
 ```
 
 Importing `flexibilling.metrics` registers counters, histograms, and gauges with

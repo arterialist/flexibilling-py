@@ -1,6 +1,6 @@
 """Redis materialized-view adapter.
 
-Install with ``pip install flexibilling[redis]``. The adapter only depends on
+Install with ``uv add "flexibilling[redis]"``. The adapter only depends on
 the cache protocol, so a backend can replace it with DynamoDB, Memcached, or a
 local cache without changing the billing service.
 """

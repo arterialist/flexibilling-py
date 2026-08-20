@@ -6,9 +6,10 @@ custom repository, Redis cache, or SQLAlchemy repository.
 ## 1. Install
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install flexibilling
+mkdir billing-example
+cd billing-example
+uv init
+uv add flexibilling
 ```
 
 For a local checkout, use the development setup in

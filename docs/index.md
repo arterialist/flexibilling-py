@@ -12,22 +12,22 @@ the engine without replacing its data models.
 ## Install
 
 ```bash
-pip install flexibilling
+uv add flexibilling
 ```
 
 Install only the integrations you need:
 
 ```bash
-pip install "flexibilling[fastapi]"
-pip install "flexibilling[redis]"
-pip install "flexibilling[sqlalchemy]"
-pip install "flexibilling[metrics]"
+uv add "flexibilling[fastapi]"
+uv add "flexibilling[redis]"
+uv add "flexibilling[sqlalchemy]"
+uv add "flexibilling[metrics]"
 ```
 
 Or install every optional integration:
 
 ```bash
-pip install "flexibilling[all]"
+uv add "flexibilling[all]"
 ```
 
 ## Documentation map

@@ -74,5 +74,5 @@ def _require_fastapi() -> None:
         import starlette  # noqa: F401
     except ImportError as error:  # pragma: no cover - only without the optional extra
         raise ImportError(
-            "FastAPI integration requires `pip install flexibilling[fastapi]`"
+            'FastAPI integration requires `uv add "flexibilling[fastapi]"`'
         ) from error
