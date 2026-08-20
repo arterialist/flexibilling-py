@@ -1,0 +1,82 @@
+name: CI
+
+on:
+  pull_request:
+    branches: ["*"]
+  push:
+    branches: [main, master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint & type check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: uv sync --group lint --group testing
+      - name: Ruff check
+        run: uv run ruff check src tests examples
+      - name: Ruff format check
+        run: uv run ruff format src tests examples --check
+      - name: Pyright
+        run: uv run pyright src/flexibilling
+
+  test:
+    name: Tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: uv sync --group testing
+      - name: Run tests
+        run: uv run pytest
+
+  build:
+    name: Build distribution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build
+        run: pipx run build
+      - name: Check package contents
+        run: |
+          python - <<'PY'
+          import glob
+          import tarfile
+          import sys
+
+          sdist = glob.glob("dist/*.tar.gz")[0]
+          names = tarfile.open(sdist).getnames()
+          required = [
+              "src/flexibilling/service.py",
+              "src/flexibilling/ports.py",
+              "src/flexibilling/adapters/redis.py",
+              "docs/index.md",
+              "examples/basic_usage.py",
+          ]
+          missing = [path for path in required if not any(path in name for name in names)]
+          sys.exit(f"missing from sdist: {missing}" if missing else 0)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
