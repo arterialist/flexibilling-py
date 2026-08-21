@@ -15,7 +15,7 @@ Run the full local check set:
 uv run pytest
 uv run ruff check src tests
 uv run ruff format src tests --check
-uv run pyright src/flexibilling
+uv run pyright --project pyproject.toml src/flexibilling
 python -m build
 uv run mkdocs build --strict
 ```

@@ -156,12 +156,12 @@ uv run pre-commit install
 uv run pytest
 uv run ruff check src tests examples
 uv run ruff format src tests examples --check
-uv run pyright src/flexibilling
-python -m build
+uv run pyright --project pyproject.toml src/flexibilling
+uv build
 uv run mkdocs build --strict
 ```
 
-CI runs lint/type checks, tests on Python 3.11–3.13, and a distribution build.
+CI runs lint/type checks, tests on Python 3.11–3.14, and a distribution build.
 Publishing is configured for PyPI trusted publishing from a GitHub release.
 
 ## License

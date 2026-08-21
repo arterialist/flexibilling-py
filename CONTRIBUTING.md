@@ -23,8 +23,8 @@ uv run --extra sqlalchemy python -c "import sqlalchemy; print(sqlalchemy.__versi
 uv run pytest
 uv run ruff check src tests examples
 uv run ruff format src tests examples --check
-uv run pyright src/flexibilling
-python -m build
+uv run pyright --project pyproject.toml src/flexibilling
+uv build
 uv run mkdocs build --strict
 ```
 

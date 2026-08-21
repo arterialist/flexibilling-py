@@ -118,7 +118,7 @@ class BillingService:
                 BILLING_USAGE_RECORDS.labels(service, outcome).inc()
                 BILLING_USAGE_DURATION.labels(service, outcome).observe(perf_counter() - started_at)
             except Exception:
-                return None
+                pass
 
     async def check_permission(self, customer_id: CustomerId) -> bool:
         return await self._gatekeeper.check(customer_id)
