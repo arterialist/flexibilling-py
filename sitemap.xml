@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://arterialist.github.io/flexibilling/</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://arterialist.github.io/flexibilling/backends/</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://arterialist.github.io/flexibilling/concepts/</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://arterialist.github.io/flexibilling/development/</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://arterialist.github.io/flexibilling/integrations/</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://arterialist.github.io/flexibilling/operations/</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+    <url>
+         <loc>https://arterialist.github.io/flexibilling/quickstart/</loc>
+         <lastmod>2026-08-21</lastmod>
+    </url>
+</urlset>
