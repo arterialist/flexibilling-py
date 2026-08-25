@@ -81,7 +81,7 @@ The adapter stores balances, period statistics, and activity events below the
 configured prefix. Custom period counters use `total_custom:<name>`. The
 service stores per-asset totals as `total_custom:asset:<asset-name>`.
 
-## SQLAlchemy reference adapter
+## SQLAlchemy adapter
 
 Install the optional dependency:
 
@@ -91,7 +91,7 @@ uv add "flexibilling[sqlalchemy]"
 uv add aiosqlite
 ```
 
-Create an async session factory and use the reference repository:
+Create an async session factory and use the included repository:
 
 ```python
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
