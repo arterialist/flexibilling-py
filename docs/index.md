@@ -5,9 +5,9 @@ balances, rates usage, applies priority rules, records ledger transactions,
 grants products idempotently, updates cache views, and processes a background
 queue.
 
-The core package has no required framework, ORM, cache, or payment dependency.
-Connect storage through the protocols in `flexibilling.ports` and keep the
-backend's existing models.
+Storage, ORM, cache, and payment integrations live outside the core package.
+Connect the host's existing models through the protocols in
+`flexibilling.ports`.
 
 ## Install
 

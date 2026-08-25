@@ -6,13 +6,13 @@
 [![Docs](https://img.shields.io/badge/docs-online-blue.svg)](https://arterialist.github.io/flexibilling-py/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-FlexiBilling is a provider-agnostic billing engine for Python backends. It
+FlexiBilling is a billing engine for Python backends. It
 tracks named balances, rates usage, applies priority rules, writes ledger
 entries, and processes pending usage records.
 
-The core package does not require a database, web framework, cache, or payment
-provider. Implement the protocols in `flexibilling.ports` against an existing
-backend, or use the included in-memory, Redis, and SQLAlchemy adapters.
+The package leaves storage, web frameworks, caches, and payment providers to the
+host application. Implement the protocols in `flexibilling.ports` against an
+existing backend, or use the included in-memory, Redis, and SQLAlchemy adapters.
 
 ## Install
 
@@ -97,13 +97,13 @@ already present there, so duration rules can use metadata filters and rating.
 Set `write_on_exception=False` when failed operations should not create a
 record.
 
-## What is included
+## Included components
 
 - `BillingService` funds accounts, rates usage, charges, refunds, and updates cache views.
 - `flexibilling.ports` defines repository, usage, cache, and transaction protocols.
 - `flexibilling.engine` contains rating, waterfall, and balance gatekeeper logic.
 - `BillingDecorators` provides `requires`, `consumes`, and usage-session helpers.
-- `BillingWorker` processes pending records with retry-safe state transitions.
+- `BillingWorker` processes pending records and records each outcome.
 - The adapters package includes in-memory, Redis, and SQLAlchemy implementations.
 - `flexibilling.integrations.fastapi` provides optional middleware and HTTP 402 helpers.
 
