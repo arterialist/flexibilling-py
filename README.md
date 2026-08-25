@@ -1,9 +1,9 @@
 # FlexiBilling for Python
 
-[![CI](https://github.com/arterialist/flexibilling/actions/workflows/ci.yaml/badge.svg)](https://github.com/arterialist/flexibilling/actions/workflows/ci.yaml)
+[![CI](https://github.com/arterialist/flexibilling-py/actions/workflows/ci.yaml/badge.svg)](https://github.com/arterialist/flexibilling-py/actions/workflows/ci.yaml)
 [![PyPI](https://img.shields.io/pypi/v/flexibilling.svg)](https://pypi.org/project/flexibilling/)
 [![Python](https://img.shields.io/pypi/pyversions/flexibilling.svg)](https://pypi.org/project/flexibilling/)
-[![Docs](https://img.shields.io/badge/docs-online-blue.svg)](https://arterialist.github.io/flexibilling/)
+[![Docs](https://img.shields.io/badge/docs-online-blue.svg)](https://arterialist.github.io/flexibilling-py/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 FlexiBilling is a provider-agnostic billing engine for Python backends. It
@@ -109,7 +109,7 @@ record.
 
 ## Documentation
 
-Read the [Python documentation](https://arterialist.github.io/flexibilling/)
+Read the [Python documentation](https://arterialist.github.io/flexibilling-py/)
 for the quickstart, concepts, backend ports, integrations, operations, and
 release process.
 

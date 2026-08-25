@@ -1,8 +1,8 @@
 site_name: FlexiBilling
 site_description: Provider-agnostic usage metering and balance billing for Python backends.
-site_url: https://arterialist.github.io/flexibilling/
-repo_name: arterialist/flexibilling
-repo_url: https://github.com/arterialist/flexibilling
+site_url: https://arterialist.github.io/flexibilling-py/
+repo_name: arterialist/flexibilling-py
+repo_url: https://github.com/arterialist/flexibilling-py
 edit_uri: edit/main/docs/
 
 theme:

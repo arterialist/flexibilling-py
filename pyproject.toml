@@ -54,10 +54,10 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/arterialist/flexibilling"
-Documentation = "https://arterialist.github.io/flexibilling/"
-Issues = "https://github.com/arterialist/flexibilling/issues"
-Source = "https://github.com/arterialist/flexibilling"
+Homepage = "https://github.com/arterialist/flexibilling-py"
+Documentation = "https://arterialist.github.io/flexibilling-py/"
+Issues = "https://github.com/arterialist/flexibilling-py/issues"
+Source = "https://github.com/arterialist/flexibilling-py"
 
 [tool.hatch.version]
 path = "src/flexibilling/__about__.py"
