@@ -66,5 +66,5 @@ file or the MkDocs configuration changes on `main`.
    trusted publishing.
 
 Before the first release, configure the PyPI trusted publisher for the
-`arterialist/flexibilling` repository and the `pypi` GitHub environment. No
+`arterialist/flexibilling-py` repository and the `pypi` GitHub environment. No
 long-lived PyPI API token is required.

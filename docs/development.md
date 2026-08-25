@@ -62,6 +62,6 @@ changes.
 4. Create a published GitHub Release for the tag.
 
 The release workflow publishes to PyPI through OIDC trusted publishing. Before
-the first release, configure the `arterialist/flexibilling` GitHub repository as
+the first release, configure the `arterialist/flexibilling-py` GitHub repository as
 a PyPI trusted publisher and create the `pypi` GitHub environment. No long-lived
 PyPI API token is needed.
